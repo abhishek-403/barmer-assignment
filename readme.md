@@ -8,13 +8,14 @@ This repository contains **two assignments**:
 ## 📍 Assignment 1: Web-Based Waypoint Management System
 
 Users can interact with an online map to add, edit, delete, and reorder waypoints, visualize paths, and export missions as JSON.
+> Live Link : https://bramer-assignment.vercel.app/
 
 ### 🔧 Features
 
 - 🧭 **Add Waypoints**: Click on the map to add a waypoint with `latitude`, `longitude`, `altitude`, and `sequence`.
 - ✏️ **Edit Waypoints**: Modify waypoint properties by selecting them.
 - ❌ **Delete Waypoints**: Remove waypoints from the mission.
-- 🔀 **Reorder Waypoints**: Change the order using drag-and-drop or buttons.
+- 🔀 **Reorder Waypoints**: Change the order using drag-and-drop.
 - 🧵 **Draw Path**: Connect waypoints visually in the order of sequence.
 - 📦 **Export Mission**: Download all waypoints as a JSON file.
 
@@ -45,6 +46,7 @@ npm run dev
 # 🌐 Assignment 2: DNS Resolver with TTL Caching
 
 A custom **DNS resolver** that sends raw DNS queries to public servers (to `8.8.8.8`) and caches responses based on TTL (Time-to-Live).
+> It is CLI based so run it locally.
 
 ---
 
