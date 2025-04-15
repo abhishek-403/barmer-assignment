@@ -108,7 +108,6 @@ class DNSResolver {
       return;
     }
 
-    console.log("DNS Cache:");
     for (const [domain, { ip, ttl, timestamp }] of this.cache.cache.entries()) {
       const age = (now - timestamp) / 1000;
       const timeLeft = Math.max(0, Math.floor(ttl - age));
@@ -139,16 +138,25 @@ function sleep(ms) {
 
 function main() {
   const resolver = new DNSResolver();
-
+  console.log(`
+===============================
+🔧 DNS Resolver CLI Options
+===============================
+- Type a domain name (e.g., google.com) to resolve it.
+- Type 'ls'        → View current cache with TTLs.
+- Type 'exit'      → Quit the program.
+===============================`);
   function getDomainInput() {
-    rl.question("\nEnter a domain to resolve : ", async (domain) => {
+    rl.question("\nEnter a domain to resolve: ", async (domain) => {
       if (domain === "exit") {
-        console.log("Exiting...");
+        console.log("👋 Exiting...");
         rl.close();
       } else if (domain === "ls") {
+        console.log("📦 Cached Results:");
         resolver.printCache();
         getDomainInput();
       } else {
+        console.log(`🌐 Resolving: ${domain}`);
         resolver.resolve(domain);
         await sleep(200);
         getDomainInput();

@@ -26,10 +26,20 @@ Users can interact with an online map to add, edit, delete, and reorder waypoint
 
 ### 🚀 Getting Started
 
+#### Installation:
 ```bash
 git clone https://github.com/abhishek-403/bramer-assignment.git
 cd ./bramer-assignment/assignment-1
 npm install
+```
+
+#### Create a .env file in the root of the project and add your Mapbox token:
+```bash
+ VITE_MAPBOX_TOKEN=your_mapbox_token_here 
+```
+
+#### Run the appplication:
+```
 npm run dev
 ```
 # 🌐 Assignment 2: DNS Resolver with TTL Caching
