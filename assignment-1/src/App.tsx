@@ -8,7 +8,6 @@ import { Waypoint, createWaypoint } from "./types";
 mapboxgl.accessToken = MAPBOX_TOKEN;
 
 const App: React.FC = () => {
-  console.log("Mapbox Token:", MAPBOX_TOKEN);
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
   const [waypoints, setWaypoints] = useState<Waypoint[]>([]);
